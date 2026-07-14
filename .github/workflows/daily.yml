@@ -1,0 +1,42 @@
+name: Daily Recruitment Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-recruitment-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Update recruitment data
+        run: python daily_update.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "recruitment-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/latest_jobs.csv data/latest_update.json exports/daily/ logs/
+          git diff --cached --quiet || git commit -m "daily recruitment update $(date +%F)"
+          git pull --rebase
+          git push

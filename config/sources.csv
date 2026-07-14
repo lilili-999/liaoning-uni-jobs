@@ -1,0 +1,8 @@
+source_id,city,school,source_name,list_url,parser_type,start_year,keywords,enabled,priority,last_success_at,last_error
+DLUT_HR,大连,大连理工大学,人力资源处/人才招聘,https://perdep.dlut.edu.cn/,generic_static,2021,"管理岗|行政|辅导员|组织员|实验技术",true,高,2026-07-14,
+DLMU_RCB,大连,大连海事大学,党委人才工作办公室,https://rcb.dlmu.edu.cn/,generic_static,2021,"行政|管理|辅导员|实验技术",true,高,2026-07-14,
+DUFE_HR,大连,东北财经大学,人事处/人才招聘,https://rsc.dufe.edu.cn/rczp/,generic_static,2021,"管理岗|行政|辅导员|组织员",true,高,2026-07-14,
+DMU_HR,大连,大连医科大学,党委教师工作部（人事处）,https://rlzyb.dmu.edu.cn/gkzp2/a2025ngkzp.htm,year_archive,2021,"管理岗|行政|辅导员|实验技术",true,高,2026-07-14,
+LNU_HR,沈阳,辽宁大学,人事处/人才招聘,https://rsc.lnu.edu.cn/rczp.htm,generic_static,2021,"管理岗|行政|辅导员|组织员",true,高,2026-07-14,
+SYRS_SYDW,沈阳,沈阳市人力资源和社会保障局,事业单位招录信息,https://rsj.shenyang.gov.cn/zwgkzdgz/jycyxx/sydwzlxx/,generic_static,2021,"高校|管理岗|行政|辅导员",true,高,2026-07-14,
+LNJYT_GSGG,省级,辽宁省教育厅,公示公告,https://jyt.ln.gov.cn/jyt/gk/gsgg/index.shtml,generic_static,2021,"招聘|高校|拟聘|公示",true,中,2026-07-14,
