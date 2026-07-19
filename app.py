@@ -141,7 +141,6 @@ with main_tab:
     display["附件"] = display["attachment_urls"].fillna("").apply(lambda value: value.split("|")[0] if value else "")
     st.dataframe(
         display[["发布日期", "城市", "学校 / 平台", "公告标题", "岗位类别", "学历", "截止日期", "状态", "官方原文", "附件"]],
-        use_container_width=True,
         height=520,
     )
     export_frame = view.copy()
@@ -161,7 +160,7 @@ with source_tab:
         source_names = df[["source_id", "school"]].drop_duplicates()
         status_df = status_df.merge(source_names, on="source_id", how="left")
         status_df = status_df.rename(columns={"school": "学校 / 平台", "status": "状态", "records": "本轮记录", "new": "新增", "updated": "修改", "error": "错误信息"})
-        st.dataframe(status_df[["学校 / 平台", "状态", "本轮记录", "新增", "修改", "错误信息"]], use_container_width=True)
+        st.dataframe(status_df[["学校 / 平台", "状态", "本轮记录", "新增", "修改", "错误信息"]])
         success_count = sum(item["status"] == "成功" for item in source_status)
         st.markdown(f'<span class="status-ok">{success_count} / {len(source_status)} 来源运行成功</span>', unsafe_allow_html=True)
     else:
@@ -174,7 +173,6 @@ with review_tab:
     review["官方原文"] = review["detail_url"]
     st.dataframe(
         review[["发布日期", "city", "school", "title", "position_keywords", "官方原文"]].rename(columns={"city": "城市", "school": "学校 / 平台", "title": "公告标题", "position_keywords": "命中关键词"}),
-        use_container_width=True,
     )
 
 st.caption("数据来源：各高校、辽宁省教育厅及沈阳市人力资源和社会保障局官方页面。")
