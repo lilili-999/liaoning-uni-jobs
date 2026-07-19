@@ -32,7 +32,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-@st.cache(ttl=300, allow_output_mutation=True)
+@st.cache_data(ttl=300)
 def load_data():
     frame = pd.read_csv(DATA_PATH, encoding="utf-8-sig")
     frame["post_date"] = pd.to_datetime(frame["post_date"], errors="coerce")
@@ -42,7 +42,7 @@ def load_data():
     return frame
 
 
-@st.cache(ttl=60, allow_output_mutation=True)
+@st.cache_data(ttl=60)
 def load_source_status():
     if not LOG_PATH.exists():
         return []
