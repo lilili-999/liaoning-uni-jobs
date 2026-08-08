@@ -1,0 +1,7 @@
+{"source_id": "DLUT_HR", "status": "成功", "records": 20, "new": 0, "updated": 0, "error": null}
+{"source_id": "DLMU_RCB", "status": "成功", "records": 13, "new": 0, "updated": 0, "error": null}
+{"source_id": "DUFE_HR", "status": "成功", "records": 7, "new": 0, "updated": 0, "error": null}
+{"source_id": "DMU_HR", "status": "失败", "records": 0, "new": 0, "updated": 0, "error": "HTTPSConnectionPool(host='rlzyb.dmu.edu.cn', port=443): Max retries exceeded with url: /gkzp2/a2025ngkzp.htm (Caused by NewConnectionError(\"HTTPSConnection(host='rlzyb.dmu.edu.cn', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"}
+{"source_id": "LNU_HR", "status": "成功", "records": 20, "new": 0, "updated": 0, "error": null}
+{"source_id": "SYRS_SYDW", "status": "成功", "records": 18, "new": 0, "updated": 0, "error": null}
+{"source_id": "LNJYT_GSGG", "status": "成功", "records": 15, "new": 0, "updated": 0, "error": null}
